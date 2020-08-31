@@ -15,7 +15,6 @@
 package gcs
 
 import (
-	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -117,12 +116,6 @@ func NewConn(cfg *ConnConfig) (c Conn, err error) {
 	// Enable HTTP debugging if requested.
 	if cfg.HTTPDebugLogger != nil {
 		transport = httputil.DebuggingRoundTripper(transport, cfg.HTTPDebugLogger)
-	}
-
-	// Wrap the HTTP transport in an oauth layer.
-	if cfg.TokenSource == nil {
-		err = errors.New("You must set TokenSource.")
-		return
 	}
 
 	transport = &oauth2.Transport{
