@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jacobsa/gcloud/gcs"
-	"github.com/jacobsa/gcloud/gcs/gcscaching"
+	"github.com/dickmao/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs/gcscaching"
 	. "github.com/jacobsa/ogletest"
 )
 

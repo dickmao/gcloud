@@ -25,8 +25,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/dickmao/gcloud/gcs"
 	"github.com/jacobsa/fuse/fsutil"
-	"github.com/jacobsa/gcloud/gcs"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2/google"
 )

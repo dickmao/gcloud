@@ -32,8 +32,8 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/jacobsa/gcloud/gcs"
-	"github.com/jacobsa/gcloud/gcs/gcsutil"
+	"github.com/dickmao/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs/gcsutil"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/ogletest"
 	"github.com/jacobsa/syncutil"
@@ -1573,8 +1573,8 @@ func (t *copyTest) SrcMetaGenerationPrecondition_Unsatisfied() {
 	// Attempt to copy, with a precondition.
 	precond := src.MetaGeneration + 1
 	req := &gcs.CopyObjectRequest{
-		SrcName: "foo",
-		DstName: "bar",
+		SrcName:                       "foo",
+		DstName:                       "bar",
 		SrcMetaGenerationPrecondition: &precond,
 	}
 
@@ -1604,8 +1604,8 @@ func (t *copyTest) SrcMetaGenerationPrecondition_Satisfied() {
 
 	// Copy, with a precondition.
 	req := &gcs.CopyObjectRequest{
-		SrcName: "foo",
-		DstName: "bar",
+		SrcName:                       "foo",
+		DstName:                       "bar",
 		SrcMetaGenerationPrecondition: &src.MetaGeneration,
 	}
 
@@ -2289,7 +2289,7 @@ func (t *composeTest) DestinationExists_MetaGenerationPreconditionNotSatisfied()
 	_, err = t.bucket.ComposeObjects(
 		t.ctx,
 		&gcs.ComposeObjectsRequest{
-			DstName: sources[0].Name,
+			DstName:                       sources[0].Name,
 			DstMetaGenerationPrecondition: &precond,
 
 			Sources: []gcs.ComposeSource{
@@ -3508,7 +3508,7 @@ func (t *updateTest) MetaGenerationPrecondition_Unsatisfied() {
 	// Attempt to update with a bad precondition.
 	precond := o.MetaGeneration + 1
 	req := &gcs.UpdateObjectRequest{
-		Name: o.Name,
+		Name:                       o.Name,
 		MetaGenerationPrecondition: &precond,
 		ContentLanguage:            makeStringPtr("fr"),
 	}
@@ -3537,7 +3537,7 @@ func (t *updateTest) MetaGenerationPrecondition_Satisfied() {
 
 	// Update with a good precondition.
 	req := &gcs.UpdateObjectRequest{
-		Name: o.Name,
+		Name:                       o.Name,
 		MetaGenerationPrecondition: &o.MetaGeneration,
 		ContentLanguage:            makeStringPtr("fr"),
 	}
@@ -3698,7 +3698,7 @@ func (t *deleteTest) MetaGenerationPrecondition_Unsatisfied_ObjectExists() {
 	err = t.bucket.DeleteObject(
 		t.ctx,
 		&gcs.DeleteObjectRequest{
-			Name: name,
+			Name:                       name,
 			MetaGenerationPrecondition: &precond,
 		})
 
@@ -3718,7 +3718,7 @@ func (t *deleteTest) MetaGenerationPrecondition_Unsatisfied_ObjectDoesntExist() 
 	err = t.bucket.DeleteObject(
 		t.ctx,
 		&gcs.DeleteObjectRequest{
-			Name: name,
+			Name:                       name,
 			MetaGenerationPrecondition: &precond,
 		})
 
@@ -3774,7 +3774,7 @@ func (t *deleteTest) MetaGenerationPrecondition_Satisfied() {
 	err = t.bucket.DeleteObject(
 		t.ctx,
 		&gcs.DeleteObjectRequest{
-			Name: name,
+			Name:                       name,
 			MetaGenerationPrecondition: &precond,
 		})
 

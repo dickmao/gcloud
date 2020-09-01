@@ -36,9 +36,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jacobsa/gcloud/gcs"
-	"github.com/jacobsa/gcloud/gcs/gcstesting"
-	"github.com/jacobsa/gcloud/gcs/gcsutil"
+	"github.com/dickmao/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs/gcstesting"
+	"github.com/dickmao/gcloud/gcs/gcsutil"
 	. "github.com/jacobsa/ogletest"
 	"github.com/jacobsa/timeutil"
 	"golang.org/x/net/context"

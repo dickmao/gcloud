@@ -8,12 +8,13 @@ package mock_gcscaching
 
 import (
 	fmt "fmt"
-	gcs "github.com/jacobsa/gcloud/gcs"
-	gcscaching "github.com/jacobsa/gcloud/gcs/gcscaching"
-	oglemock "github.com/jacobsa/oglemock"
 	runtime "runtime"
 	time "time"
 	unsafe "unsafe"
+
+	gcs "github.com/dickmao/gcloud/gcs"
+	gcscaching "github.com/dickmao/gcloud/gcs/gcscaching"
+	oglemock "github.com/jacobsa/oglemock"
 )
 
 type MockStatCache interface {

@@ -17,7 +17,7 @@ package gcsutil
 import (
 	"bytes"
 
-	"github.com/jacobsa/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs"
 	"golang.org/x/net/context"
 )
 

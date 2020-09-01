@@ -22,7 +22,7 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/jacobsa/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs"
 	"github.com/jacobsa/timeutil"
 )
 

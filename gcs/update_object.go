@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/jacobsa/gcloud/httputil"
+	"github.com/dickmao/gcloud/httputil"
 	"golang.org/x/net/context"
 	"google.golang.org/api/googleapi"
 	storagev1 "google.golang.org/api/storage/v1"

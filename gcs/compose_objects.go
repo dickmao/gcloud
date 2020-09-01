@@ -24,7 +24,7 @@ import (
 	"net/url"
 	"unicode/utf8"
 
-	"github.com/jacobsa/gcloud/httputil"
+	"github.com/dickmao/gcloud/httputil"
 	"google.golang.org/api/googleapi"
 	storagev1 "google.golang.org/api/storage/v1"
 

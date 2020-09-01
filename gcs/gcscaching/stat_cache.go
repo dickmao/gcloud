@@ -17,7 +17,7 @@ package gcscaching
 import (
 	"time"
 
-	"github.com/jacobsa/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs"
 	"github.com/jacobsa/util/lrucache"
 )
 

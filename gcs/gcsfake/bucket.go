@@ -27,7 +27,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/jacobsa/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs"
 	"github.com/jacobsa/syncutil"
 	"github.com/jacobsa/timeutil"
 	"golang.org/x/net/context"
@@ -671,7 +671,7 @@ func (b *bucket) ComposeObjects(
 
 	// Create the new object.
 	createReq := &gcs.CreateObjectRequest{
-		Name: req.DstName,
+		Name:                       req.DstName,
 		GenerationPrecondition:     req.DstGenerationPrecondition,
 		MetaGenerationPrecondition: req.DstMetaGenerationPrecondition,
 		Contents:                   io.MultiReader(srcReaders...),

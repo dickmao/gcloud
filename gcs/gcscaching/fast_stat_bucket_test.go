@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jacobsa/gcloud/gcs"
-	"github.com/jacobsa/gcloud/gcs/gcscaching"
-	"github.com/jacobsa/gcloud/gcs/gcscaching/mock_gcscaching"
+	"github.com/dickmao/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs/gcscaching"
+	"github.com/dickmao/gcloud/gcs/gcscaching/mock_gcscaching"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/oglemock"
 	. "github.com/jacobsa/ogletest"

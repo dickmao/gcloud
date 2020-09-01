@@ -20,8 +20,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/jacobsa/gcloud/gcs/gcsfake"
-	"github.com/jacobsa/gcloud/gcs/gcstesting"
+	"github.com/dickmao/gcloud/gcs/gcsfake"
+	"github.com/dickmao/gcloud/gcs/gcstesting"
 	"github.com/jacobsa/ogletest"
 	"github.com/jacobsa/timeutil"
 )

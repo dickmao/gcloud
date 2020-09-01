@@ -15,7 +15,7 @@
 package gcsutil
 
 import (
-	"github.com/jacobsa/gcloud/gcs"
+	"github.com/dickmao/gcloud/gcs"
 	"github.com/jacobsa/syncutil"
 	"golang.org/x/net/context"
 )

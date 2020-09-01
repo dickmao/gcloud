@@ -23,7 +23,7 @@ import (
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
 
-	"github.com/jacobsa/gcloud/httputil"
+	"github.com/dickmao/gcloud/httputil"
 	"github.com/jacobsa/reqtrace"
 
 	"google.golang.org/api/googleapi"
