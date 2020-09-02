@@ -118,9 +118,11 @@ func NewConn(cfg *ConnConfig) (c Conn, err error) {
 		transport = httputil.DebuggingRoundTripper(transport, cfg.HTTPDebugLogger)
 	}
 
-	transport = &oauth2.Transport{
-		Source: cfg.TokenSource,
-		Base:   transport,
+	if cfg.TokenSource != nil {
+		transport = &oauth2.Transport{
+			Source: cfg.TokenSource,
+			Base:   transport,
+		}
 	}
 
 	// Set up the connection.
